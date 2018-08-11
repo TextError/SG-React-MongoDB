@@ -8,7 +8,7 @@ const app = express();
 //desc     Test router
 //@access  Public
 app.get('/', (req,res) => {
-  res.send({ hi: 'there' });
+  res.send({ hello: 'world' });
 });
 
 //------------------------------------
