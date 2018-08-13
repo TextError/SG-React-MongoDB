@@ -1,4 +1,7 @@
 const express = require('express');
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+
 const app = express();
 
 
@@ -7,9 +10,11 @@ const app = express();
 //@route   Get localhost:5000
 //desc     Test router
 //@access  Public
-app.get('/', (req,res) => {
-  res.send({ hello: 'world!' });
-});
+
+
+//------------------------------------
+
+passport.use(new GoogleStrategy());
 
 //------------------------------------
 
