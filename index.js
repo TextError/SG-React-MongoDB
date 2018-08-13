@@ -14,6 +14,11 @@ const app = express();
 
 //------------------------------------
 
+//ClientID
+//149621132971-ek46q47hginu9r21egj4ug9qfouvkne4.apps.googleusercontent.com
+
+//ClientSecret
+//vKvwJuYEZGETARc-e4cKHNyv
 passport.use(new GoogleStrategy());
 
 //------------------------------------
