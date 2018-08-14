@@ -8,21 +8,24 @@ const app = express();
 
 //------------------------------------
 
-//@route   Get localhost:5000
-//desc     Test router
-//@access  Public
-
-
-//------------------------------------
-
 passport.use(new GoogleStrategy(
-    { cliendID: keys.googleClientID,
+    { 
+      cliendID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback'},
-    (access) => {
+      callbackURL: '/auth/google/callback'
+    },
+    accessToken => {
       console.log(accessToken);
     }
   ));
+
+//------------------------------------
+
+//@route   Get localhost:5000/auth/google
+//desc     Test router
+//@access  ?
+app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email '] })
+);
 
 //------------------------------------
 
