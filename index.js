@@ -10,7 +10,7 @@ const app = express();
 
 passport.use(new GoogleStrategy(
     { 
-      cliendID: keys.googleClientID,
+      clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
       callbackURL: '/auth/google/callback'
     },
