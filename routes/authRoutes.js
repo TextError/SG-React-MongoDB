@@ -23,7 +23,7 @@ module.exports = (app) => {
   //@access  Private
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.json({ logout: 'You successfully logged out'});
+    res.json({ logout: 'You successfully logged out.'});
   });
 
   //------------------------------------
