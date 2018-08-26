@@ -12,7 +12,7 @@ const app = express();
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
   .then(() => {
     console.log('MongoDB connected');
-    console.log(`Server is running on port: ${PORT}`);
+    console.log(`Server is running on port: ${PORT} !`);
   })
   .catch(err => console.log(err));
 
