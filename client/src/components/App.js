@@ -2,11 +2,25 @@
 //function component
 
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+//Dummy components
+const Header = () => <h2>Header</h2>
+const Dasboard = () => <h2>Dasboard</h2>
+const SurveyNew = () => <h2>SurveyNew</h2>
+const Landing = () => <h2>Landing</h2>
 
 const App = () => {
   return(
     <div>
-      Hi there!
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/surveys' component={Dasboard} />
+          <Route path='/surveys/new' component={SurveyNew} />
+        </div>
+      </BrowserRouter>
     </div>
   );
 };
