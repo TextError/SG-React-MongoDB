@@ -14,7 +14,13 @@ module.exports = (app) => {
   //@route   Get localhost:5000/auth/google
   //desc     Authenticate Google user - Callback
   //@access  Private
-  app.get('/auth/google/callback', passport.authenticate('google'));
+  app.get(
+    '/auth/google/callback', 
+    passport.authenticate('google'),
+    (req, res) => {
+      res.redirect('/surveys');
+    }
+  );
 
   //------------------------------------
 
@@ -23,7 +29,7 @@ module.exports = (app) => {
   //@access  Private
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.json({ logout: 'You successfully logged out.'});
+    res.redirect('/');
   });
 
   //------------------------------------
