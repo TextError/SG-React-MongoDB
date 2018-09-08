@@ -8,6 +8,7 @@ import * as actions from '../actions';
 
 //Components
 import Header from './Header';
+import Landing from './Landing';
 
 //Css
 import 'materialize-css/dist/css/materialize.min.css';
@@ -16,7 +17,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 // const Header = () => <h2>Header</h2>
 const Dasboard = () => <h2>Dasboard</h2>
 const SurveyNew = () => <h2>SurveyNew</h2>
-const Landing = () => <h2>Landing</h2>
+// const Landing = () => <h2>Landing</h2>
 
 
 
